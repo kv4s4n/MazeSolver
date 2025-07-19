@@ -1,0 +1,45 @@
+Huge thanks to Dr. Mike Pound from Computerphile Youtube Channel, where the 
+Maze solving video inspired me to do this project. All the maze images are 
+taken from his Github account -> https://github.com/mikepound/mazesolving
+
+MAZE NOMENCLATURE
+
+1) Perfect -> Only one path exists from start to finish.
+2) Braid   -> Multiple paths exist from start to finish.
+3) Combo   -> Similar to Braid but certain paths are dead ends.
+4) Number after name indicates the side length of the square maze in pixels.
+	Eg :- 2k => Side length of 2000 pixels
+
+MAZE STRUCTURE
+
+1) Black color pixel represents wall.
+2) White color pixel represents path.
+3) The maze is surrounded by walls on all four sides.
+4) Only one entrance at the top wall and exit at the bottom wall of the maze.
+5) There must be at least one path from entrance to exit.
+6) Must be square.
+
+
+CONVERTING MAZE IMAGES TO TEXT FILES
+	
+Maze images are stored in the following path.
+
+	MAZE_PATH = ./Maze_Solver/Maze/maze_images
+
+For convenience and to save memory, the images must be converted to a .txt file where the 
+White pixels are represented by number 1 and Black pixels are represented by number 0.
+
+Text files are stored in the following path.
+
+	TEXT_FILE_PATH = ./Maze_Solver/Maze/maze_text_files
+
+NOTE :- There are already plenty of maze images to choose from, pre-converted to text files.
+	But before proceeding, run the following command from the folder.
+
+	```pip3 install requirements.txt```
+
+To convert a maze image to a text file, 
+	1) Store the image in the """maze_images""" folder in png format.
+	2) Move to the Maze directory and run the """image_to_maze.py""" program after 
+making sure it follows the rules of MAZE STRUCTURE mentioned above.
+	3) The text file for the maze is generated in the """maze_text_files""" folder.
